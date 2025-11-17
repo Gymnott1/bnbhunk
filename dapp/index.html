@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Distributor dApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Smart Distributor dApp</h1>
+
+        <button id="connectButton">Connect Wallet</button>
+        <div id="walletInfo">
+            <p>Status: <span id="status">Not Connected</span></p>
+            <p>Account: <span id="account">N/A</span></p>
+        </div>
+
+        <div class="card">
+            <h2>Contract Info</h2>
+            <p>Total Registered Recipients: <strong id="recipientCount">0</strong></p>
+            <button id="registerButton" disabled>Register Me as a Recipient</button>
+        </div>
+
+        <div class="card">
+            <h2>Distribute Funds</h2>
+            <p>Send BNB to be split equally among ALL registered recipients.</p>
+            <div class="form-group">
+                <input type="text" id="distributeAmount" placeholder="Amount in BNB (e.g., 0.5)">
+                <button id="distributeButton" disabled>Distribute to All</button>
+            </div>
+        </div>
+
+        <div id="logs">
+            <h3>Activity Log</h3>
+            <pre id="logContent"></pre>
+        </div>
+    </div>
+    <!-- Ethers.js library from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js"></script>
+    <!-- Our dApp's logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
